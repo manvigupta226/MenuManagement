@@ -8,5 +8,5 @@ The application uses Sequelize for database operations and is structured with a 
 1. Clone the repository:
 
    '''
-   git clone 
-   
+   git clone https://github.com/manvigupta226/MenuManagement.git
+   '''   

@@ -134,6 +134,9 @@ The project uses Sequelize ORM to define models and manage database interactions
    ![Screenshot from 2024-05-17 12-31-58](https://github.com/manvigupta226/MenuManagement/assets/107646725/92e20e3f-ee74-47ab-81b8-b72cb17f0345)
 
 
+## Postman Collection- https://www.postman.com/solar-capsule-271232/workspace/menumanagement/collection/34972431-bd677e05-8daf-4268-a2ce-39cb6e19ec95?action=share&creator=34972431
+
+
 
    
 

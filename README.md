@@ -26,6 +26,7 @@ The application uses Sequelize for database operations and is structured with a 
 1. Create category: POST /categories
 
    **Request Body-**
+  ```
     {
   "name": "Beverages",
   "image": "http://example.com/image.jpg",
@@ -34,15 +35,26 @@ The application uses Sequelize for database operations and is structured with a 
   "tax": 10.5,
   "taxType": "percentage"
 }
+```
 
 
-2. Get all categories: GET /categories
+3. Get all categories:
+   ```
+   GET /categories
+   ```
 
-3. Get category by ID or Name: GET /categories/:id_or_name
+4. Get category by ID or Name:
+   ```
+   GET /categories/:id_or_name
+   ```
 
-4. Update a category: PUT /categories/:id
+5. Update a category:
+  ``` 
+  PUT /categories/:id
+```
 
    **Request Body-**
+   ```
    {
   "name": "New Beverages",
   "image": "http://example.com/new-image.jpg",
@@ -51,13 +63,18 @@ The application uses Sequelize for database operations and is structured with a 
   "tax": 8.5,
   "taxType": "fixed"
 }
+```
 
 
 ### Subcategories
 
-1. Create a Subcategory: POST /subcategories
+1. Create a Subcategory:
+   ```
+   POST /subcategories
+   ```
 
     **Request Body-**
+```
    {
   "name": "Soft Drinks",
   "image": "http://example.com/image.jpg",
@@ -67,17 +84,30 @@ The application uses Sequelize for database operations and is structured with a 
   "taxType": "percentage",
   "categoryId": 1
 }
+```
+  
+2. Get all Subcategories:
+```
+GET /subcategories
+```
 
+3. Get Subcategories by Category:
+  ```
+  GET /categories/:categoryId/subcategories
+  ```
 
-2. Get all Subcategories: GET /subcategories
+4. Get Subcategory by ID or Name:
+```
+GET /subcategories/:id_or_name
+```
 
-3. Get Subcategories by Category: GET /categories/:categoryId/subcategories
-
-4. Get Subcategory by ID or Name: GET /subcategories/:id_or_name
-
-5. Update a Subcategory: PUT /subcategories/:id
+5. Update a Subcategory:
+```
+PUT /subcategories/:id
+```
 
    **Request Body-**
+   ```
    {
   "name": "New Soft Drinks",
   "image": "http://example.com/new-image.jpg",
@@ -86,13 +116,18 @@ The application uses Sequelize for database operations and is structured with a 
   "tax": 3,
   "taxType": "fixed"
 }
+```
 
 
 ### Items
 
-1. Create an Item: POST /items
+1. Create an Item:
+```
+POST /items
+```
 
    **Request Body-**
+   ```
    {
   "name": "Coca Cola",
   "image": "http://example.com/image.jpg",
@@ -103,17 +138,30 @@ The application uses Sequelize for database operations and is structured with a 
   "discount": 1,
   "subcategoryId": 1
 }
+```
 
+2. Get all Items:
+```
+  GET /items
+```
 
-2. Get all Items: GET /items
+3. Get items by Subcategory:
+```
+GET /subcategories/:subcategoryId/items
+```
 
-3. Get items by Subcategory: GET /subcategories/:subcategoryId/items
+4. Get item by ID or Name:
+```  
+ GET /items/:id_or_name
+```
 
-4. Get item by ID or Name: GET /items/:id_or_name
-
-5. Update an item: PUT /items/:id
+5. Update an item:
+  ```
+PUT /items/:id
+```
 
    **Request Body-**
+   ```
    {
   "name": "New Coca Cola",
   "image": "http://example.com/new-image.jpg",
@@ -123,6 +171,7 @@ The application uses Sequelize for database operations and is structured with a 
   "baseAmount": 9,
   "discount": 0.5
 }
+```
 
 
 ## Database Schema
